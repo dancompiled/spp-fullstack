@@ -1,9 +1,9 @@
-<header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+<header class="bg-surface border-b border-stroke-secondary px-6 py-4 flex items-center justify-between">
   <div>
-    <%= content_for?(:page_title) ? content_for(:page_title) : "" %>
+    <%= content_for?(:page_title) ? content_for(:page_title) : "SPP" %>
   </div>
-
   <div class="flex items-center gap-4">
+    <%= render "shared/theme_toggle" %>
     <%= button_to "Sign out",
           session_path,
           method: :delete,
